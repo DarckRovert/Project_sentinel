@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Filtro de dispositivos USB para el radar HLK-LD2450 y el IMU BNO055.
+    Android mostrará automáticamente el diálogo de permiso USB cuando se
+    conecten estos dispositivos.
+    
+    VID/PID del chip USB-Serial CH340 (común en módulos chinos de bajo costo):
+    Vendor:  0x1A86 (QinHeng Electronics)
+    Product: 0x7523 (CH340)
+    
+    CP2102 (Silicon Labs - más preciso):
+    Vendor:  0x10C4
+    Product: 0xEA60
+-->
+<resources>
+    <usb-device vendor-id="6790" product-id="29987" />   <!-- CH340  (decimal) -->
+    <usb-device vendor-id="4292" product-id="60000" />   <!-- CP2102 (decimal) -->
+    <usb-device vendor-id="1027" product-id="24577" />   <!-- FTDI FT232R      -->
+</resources>
