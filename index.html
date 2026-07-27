@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel | ADAS Retrofit COTS & Háptico 360°</title>
+    <meta name="description" content="Sistema de alerta temprana de colisiones (ADAS) modular y de bajo costo para cualquier vehículo, sobre Android COTS y retroalimentación háptica en asiento.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Sentinel — Democratizando la Seguridad Vehicular">
+    <meta property="og:description" content="Sistema ADAS modular sobre retrovisores Android comerciales con sensor mmWave y asiento háptico 360°.">
+    <meta property="og:image" content="assets/images/hero-dashboard.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="shield-icon">🛡️</div>
+                <div class="logo-text">
+                    <span class="brand-name">SENTINEL</span>
+                    <span class="brand-tag">ADAS RETROFIT</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#vision">Visión & Mercado</a>
+                <a href="#kits">Kits Modulares</a>
+                <a href="#simulator">Simulador Live</a>
+                <a href="#architecture">Arquitectura</a>
+                <a href="#roadmap">Hoja de Ruta</a>
+                <a href="#investors" class="nav-cta-investor">Inversionistas</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://github.com/DarckRovert/Project_sentinel" target="_blank" class="github-btn" id="github-repo-link">
+                    <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    <span>GitHub Repo</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-pill">
+                    <span class="pulse-dot"></span>
+                    PROYECTO OPEN HARDWARE & SOFTWARE
+                </div>
+                <h1 class="hero-title">Democratizando la Seguridad Vehicular Avanzada</h1>
+                <p class="hero-subtitle">
+                    Sentinel convierte cualquier retrovisor inteligente Android de bajo costo en un sistema <strong>ADAS de alerta temprana de colisión</strong> con sensor de radar mmWave y retroalimentación háptica 360° en el asiento.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#simulator" class="btn btn-primary">Probar Simulador Interactivo</a>
+                    <a href="#kits" class="btn btn-secondary">Ver Kits & Hardware COTS</a>
+                </div>
+                
+                <!-- Quick Metrics Grid -->
+                <div class="hero-metrics">
+                    <div class="metric-card">
+                        <span class="metric-val">+1.4B</span>
+                        <span class="metric-lbl">Vehículos sin ADAS en el mundo</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-val">&lt; 100ms</span>
+                        <span class="metric-lbl">Latencia End-to-End Target</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-val">-85%</span>
+                        <span class="metric-lbl">Costo vs. Equipamiento OEM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="glass-card-hero">
+                    <img src="assets/images/hero-dashboard.png" alt="Sentinel ADAS HUD Display" class="hero-img">
+                    <div class="hud-live-tag">
+                        <span class="hud-status">● LIVE RADAR ONLINE</span>
+                        <span class="hud-fps">LD2450 @ 10Hz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & MARKET OPPORTUNITY (INVESTORS FOCUS) -->
+    <section id="vision" class="section vision-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">OPORTUNIDAD DE MERCADO</span>
+                <h2>El Problema del Parque Automotor Global</h2>
+                <p>El 72% de los vehículos en circulación a nivel mundial tienen más de 8 años de antigüedad y carecen por completo de sistemas de asistencia a la conducción.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card glass-card">
+                    <div class="card-icon">🚗</div>
+                    <h3>Brecha de Seguridad</h3>
+                    <p>Las tecnologías ADAS de fábrica (Tesla Autopilot, Toyota Safety Sense) están reservadas para vehículos nuevos de gama media/alta. Retrofitar con OEMs cuesta más de $2,000 USD.</p>
+                </div>
+                <div class="card glass-card highlighting">
+                    <div class="card-icon">⚡</div>
+                    <h3>Solución Sentinel COTS</h3>
+                    <p>Software sofisticado sobre hardware comercial listo para usar (*Commercial Off-The-Shelf*). Aprovechamos retrovisores Android de importación masiva + sensores mmWave de bajo costo.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="card-icon">🪑</div>
+                    <h3>Innovación Háptica 360°</h3>
+                    <p>Sustituimos o complementamos las ruidosas alertas sonoras con un cobertor de asiento inteligente (ESP32 + BLE). El conductor *siente* la amenaza en la espalda o muslos inmediatamente.</p>
+                </div>
+            </div>
+
+            <!-- Cost Comparison Box -->
+            <div class="comparison-box glass-card margin-top-xl">
+                <div class="comparison-header">
+                    <h3>Disrupción de Costos: Sentinel vs. Alternativas</h3>
+                </div>
+                <div class="comparison-grid">
+                    <div class="col-alt">
+                        <h4>Vehículo Nuevo con ADAS</h4>
+                        <span class="price-tag">$25,000+ USD</span>
+                        <ul>
+                            <li>❌ Inaccesible para la mayoría</li>
+                            <li>❌ Requiere cambiar de auto</li>
+                            <li>❌ Sensores propietarios costosos</li>
+                        </ul>
+                    </div>
+                    <div class="col-alt">
+                        <h4>Retrofit Propietario OEM</h4>
+                        <span class="price-tag">$1,800 - $3,500 USD</span>
+                        <ul>
+                            <li>❌ Instalación profesional compleja</li>
+                            <li>❌ Incompatible con autos viejos</li>
+                            <li>❌ Software cerrado</li>
+                        </ul>
+                    </div>
+                    <div class="col-sentinel">
+                        <div class="badge-featured">RECOMENDADO</div>
+                        <h4>Sentinel COTS System</h4>
+                        <span class="price-tag">$120 - $220 USD</span>
+                        <ul>
+                            <li>✅ Instalación Plug & Play</li>
+                            <li>✅ Compatible con el 99% de autos</li>
+                            <li>✅ Software Open & Escalable</li>
+                            <li>✅ Asiento háptico táctil intuitivo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KITS MODULARES (PRODUCTO & HARDWARE) -->
+    <section id="kits" class="section kits-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">MODELO DE PRODUCTO</span>
+                <h2>Kits Escalables para Todo Perfil</h2>
+                <p>Gestionamos los costos de entrada vendiendo Sentinel en dos niveles modulares.</p>
+            </div>
+
+            <div class="grid-2 margin-top-lg">
+                <!-- KIT ESENCIAL -->
+                <div class="kit-card glass-card">
+                    <div class="kit-badge">ENTRADA ACCESIBLE</div>
+                    <h3 class="kit-title">Kit Esencial</h3>
+                    <p class="kit-desc">Diseñado para conductores particulares que buscan alerta temprana sin modificar el interior del auto.</p>
+                    <div class="kit-price">
+                        <span class="currency">$</span><span class="amount">119</span><span class="period">USD (Est. MSRP)</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li>✔️ Retrovisor Inteligente Android (Display HD + Android 9+)</li>
+                        <li>✔️ Radar mmWave HLK-LD2450 (UART USB @ 256kbaud)</li>
+                        <li>✔️ Cámara USB Gran Angular 1080p (Camera2 API)</li>
+                        <li>✔️ IMU 9-DoF Bosch BNO055 (Predicción de Trayectoria)</li>
+                        <li>✔️ App Sentinel Base (Alertas visuales HUD + audio TTS)</li>
+                    </ul>
+                </div>
+
+                <!-- KIT COMPLETO / PREMIUM -->
+                <div class="kit-card glass-card kit-featured">
+                    <div class="kit-badge featured">INNOVACIÓN PREMIUM</div>
+                    <h3 class="kit-title">Kit Completo (Premium)</h3>
+                    <p class="kit-desc">La experiencia de protección definitiva con estimulación física táctil en el asiento.</p>
+                    <div class="kit-price">
+                        <span class="currency">$</span><span class="amount">219</span><span class="period">USD (Est. MSRP)</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li>✔️ <strong>Todo lo incluido en el Kit Esencial</strong></li>
+                        <li>✔️ <strong>Tapete de Asiento Háptico 360°</strong> (ESP32-S3 + BLE 5.0)</li>
+                        <li>✔️ <strong>4x Controladores DRV2605L + Motores LRA</strong> (Respuesta < 30ms)</li>
+                        <li>✔️ Radar Avanzado TI AWR1843BOOST (Rango 80m+)</li>
+                        <li>✔️ GPS u-blox externo de alta precisión</li>
+                        <li>✔️ Sensores ultrasónicos IP67 laterales (Punto Ciego)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hardware Showcase Product Image -->
+            <div class="product-showcase glass-card margin-top-xl">
+                <div class="product-showcase-grid">
+                    <div class="showcase-info">
+                        <span class="tag-accent">REVOLUCIÓN EN HÁPTICA</span>
+                        <h3>Tapete de Asiento Inteligente</h3>
+                        <p>
+                            En situaciones de emergencia en carretera, el oído y la vista suelen estar sobrecargados. Sentinel activa <strong>estimulación háptica direccional</strong> en el cobertor de asiento para indicarle al conductor instintivamente de dónde proviene el riesgo.
+                        </p>
+                        <div class="haptic-specs">
+                            <div class="spec-item">
+                                <strong>4 Zonas:</strong> Frente, Atrás, Izquierda, Derecha
+                            </div>
+                            <div class="spec-item">
+                                <strong>Latencia BLE:</strong> &lt; 20ms vía Protocolo GATT 1-byte
+                            </div>
+                            <div class="spec-item">
+                                <strong>Patrones:</strong> Pulso Único, Doble Pulso, Continuo
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-img-box">
+                        <img src="assets/images/haptic-seat.png" alt="Tapete háptico inteligente Sentinel" class="showcase-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE SIMULATOR (WOW FACTOR) -->
+    <section id="simulator" class="section simulator-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">DEMOSTRACIÓN INTERACTIVA</span>
+                <h2>Simulador en Tiempo Real de Sentinel</h2>
+                <p>Haz clic en las diferentes zonas de peligro o ajusta la velocidad para simular la detección del radar, el cálculo de TTC (Time To Collision), el HUD visual y la vibración del asiento háptico.</p>
+            </div>
+
+            <div class="simulator-wrapper glass-card margin-top-lg">
+                <!-- Controls Row -->
+                <div class="sim-controls">
+                    <div class="control-group">
+                        <label for="speedRange">Velocidad del Vehículo: <span id="speedVal">60</span> km/h</label>
+                        <input type="range" id="speedRange" min="10" max="140" value="60" class="slider">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="distanceRange">Distancia al Objeto: <span id="distanceVal">12.0</span> m</label>
+                        <input type="range" id="distanceRange" min="1.0" max="30.0" step="0.5" value="12.0" class="slider">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="relSpeedRange">Velocidad Relativa Objeto: <span id="relSpeedVal">-15.0</span> m/s</label>
+                        <input type="range" id="relSpeedRange" min="-35.0" max="0.0" step="0.5" value="-15.0" class="slider">
+                    </div>
+                </div>
+
+                <!-- Interactive Main View -->
+                <div class="sim-main-grid">
+                    
+                    <!-- Interactive Threat Selector / Radar Box -->
+                    <div class="sim-card radar-box">
+                        <h4>Radar Terrestre & Zonas de Amenaza</h4>
+                        <p class="subtext">Haz clic en una zona para simular un objetivo de radar en curso de colisión:</p>
+
+                        <div class="car-radar-stage">
+                            <div class="zone-btn zone-front" id="btn-front" onclick="triggerZone('FRONT')">
+                                <span>FRENTE</span>
+                                <small>0°</small>
+                            </div>
+                            <div class="zone-btn zone-left" id="btn-left" onclick="triggerZone('LEFT')">
+                                <span>IZQUIERDA</span>
+                                <small>-90°</small>
+                            </div>
+                            <div class="car-body">
+                                <span>🚘</span>
+                                <div class="car-label">NUESTRO VEHÍCULO</div>
+                            </div>
+                            <div class="zone-btn zone-right" id="btn-right" onclick="triggerZone('RIGHT')">
+                                <span>DERECHA</span>
+                                <small>+90°</small>
+                            </div>
+                            <div class="zone-btn zone-back" id="btn-back" onclick="triggerZone('BACK')">
+                                <span>ATRÁS</span>
+                                <small>180°</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Replica of Android HUD UI -->
+                    <div class="sim-card hud-box">
+                        <div class="hud-header">
+                            <span>DISPLAY RETROVISOR ANDROID</span>
+                            <span class="hud-pill" id="sim-status-pill">MONITOREANDO</span>
+                        </div>
+
+                        <div class="hud-screen" id="sim-hud-screen">
+                            <div class="hud-icon" id="sim-hud-icon">✅</div>
+                            <div class="hud-ttc-box">
+                                <span class="hud-ttc-value" id="sim-ttc-val">--</span>
+                                <span class="hud-ttc-label" id="sim-ttc-lbl">MONITOREANDO</span>
+                            </div>
+                            <div class="hud-threat-badge" id="sim-threat-badge">NONE</div>
+                        </div>
+                    </div>
+
+                    <!-- Live Haptic Seat Response -->
+                    <div class="sim-card seat-box">
+                        <h4>Respuesta del Tapete Háptico</h4>
+                        <div class="seat-diagram">
+                            <div class="seat-node node-front" id="node-front">FRENTE</div>
+                            <div class="seat-middle">
+                                <div class="seat-node node-left" id="node-left">IZQ</div>
+                                <div class="seat-center">
+                                    <div class="esp32-badge">ESP32 BLE</div>
+                                </div>
+                                <div class="seat-node node-right" id="node-right">DER</div>
+                            </div>
+                            <div class="seat-node node-back" id="node-back">ATRÁS</div>
+                        </div>
+
+                        <div class="haptic-log-box">
+                            <div class="log-row"><span>GATT Payload:</span> <strong id="ble-payload">0x00</strong></div>
+                            <div class="log-row"><span>Intensidad:</span> <strong id="haptic-intensity">OFF (0%)</strong></div>
+                            <div class="log-row"><span>Patrón:</span> <strong id="haptic-pattern">NONE</strong></div>
+                            <div class="log-row"><span>Latencia Est.:</span> <strong id="haptic-latency">-- ms</strong></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE & HARDWARE (PARTNERS & DEV FOCUS) -->
+    <section id="architecture" class="section architecture-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">ARQUITECTURA DE SOFTWARE & EMBEDDED</span>
+                <h2>Estructura Técnica de Baja Latencia</h2>
+                <p>Clean Architecture en Kotlin + Motor C++ JNI con Filtro de Kalman + BLE GATT de baja latencia en ESP32.</p>
+            </div>
+
+            <!-- Architecture Diagram Grid -->
+            <div class="arch-diagram glass-card margin-top-lg">
+                <div class="arch-layer ui-layer">
+                    <div class="layer-title">CAPA DE PRESENTACIÓN (UI / HUD)</div>
+                    <div class="layer-tech">Jetpack Compose • Landscape Orientation • BroadcastReceiver</div>
+                </div>
+
+                <div class="arch-connector">↓ StateFlow & Coroutines</div>
+
+                <div class="arch-layer domain-layer">
+                    <div class="layer-title">CAPA DE DOMINIO (Use Cases)</div>
+                    <div class="layer-tech">CollisionDetectionUseCase (Algoritmo TTC) • ThreatClassification • HapticAlertUseCase</div>
+                </div>
+
+                <div class="arch-connector">↓ JNI Bridge & Serial IO</div>
+
+                <div class="arch-grid-dual">
+                    <div class="arch-layer jni-layer">
+                        <div class="layer-title">MOTOR C++ (JNI / Native)</div>
+                        <div class="layer-tech">Kalman Filter 1D • Distance Smoothing • Doppler Speed Fusion</div>
+                    </div>
+                    <div class="arch-layer ble-layer">
+                        <div class="layer-title">FIRMWARE ESP32 HÁPTICO</div>
+                        <div class="layer-tech">NimBLE GATT Server • TCA9548A I2C Mux • 4x DRV2605L Drivers</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Component SDK Openness Matrix Table -->
+            <div class="table-container glass-card margin-top-xl">
+                <h3 class="table-title">Auditoría de Componentes COTS & Apertura de SDKs</h3>
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Modelo Sugerido</th>
+                            <th>Interfaz</th>
+                            <th>Documentación / SDK</th>
+                            <th>Rol en Sentinel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Radar mmWave</strong></td>
+                            <td>HLK-LD2450</td>
+                            <td>UART / USB @ 256k</td>
+                            <td><span class="status-open">✅ Documentación Binaria Pública</span></td>
+                            <td>Detección primaria de distancia y velocidad Doppler</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cámara USB</strong></td>
+                            <td>Sony IMX322 1080p</td>
+                            <td>USB UVC</td>
+                            <td><span class="status-open">✅ Camera2 API Nativo Android</span></td>
+                            <td>Clasificación de objetos (YOLO TFLite)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IMU 9-DoF</strong></td>
+                            <td>Bosch BNO055</td>
+                            <td>I²C / USB-Serial</td>
+                            <td><span class="status-open">✅ SDK Open-Source Bosch</span></td>
+                            <td>Fusión inercial y predicción de trayectoria vehicular</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Microcontrolador Háptico</strong></td>
+                            <td>ESP32-S3 Mini</td>
+                            <td>BLE 5.0 / I²C</td>
+                            <td><span class="status-open">✅ ESP-IDF & Arduino NimBLE</span></td>
+                            <td>Servidor BLE GATT para tapete de asiento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Controladores Hápticos</strong></td>
+                            <td>TI DRV2605L (x4)</td>
+                            <td>I²C Multiplexado</td>
+                            <td><span class="status-open">✅ Adafruit DRV2605 Library</span></td>
+                            <td>Control de efectos LRA/ERM en 4 zonas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP (HOJA DE RUTA) -->
+    <section id="roadmap" class="section roadmap-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">PLAN DE EJECUCIÓN</span>
+                <h2>Hoja de Ruta hacia el MVP (10 Semanas)</h2>
+            </div>
+
+            <div class="timeline margin-top-lg">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">Semana 1</div>
+                    <div class="timeline-content glass-card">
+                        <h4>Fase 0: Scaffolding & Arquitectura ✅</h4>
+                        <p>Estructura de repositorio Clean Architecture en Kotlin, motor JNI C++ con Filtro Kalman, parser de protocolo binario LD2450 y firmware ESP32 NimBLE.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="timeline-marker">Semanas 2-3</div>
+                    <div class="timeline-content glass-card">
+                        <h4>Fase 1: Integración Sensor Layer & USB OTG</h4>
+                        <p>Validación de comunicación serial física con el radar HLK-LD2450 en retrovisor Android real y calibración de ruido.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Semanas 4-5</div>
+                    <div class="timeline-content glass-card">
+                        <h4>Fase 2: Motor de Colisión & Pruebas de Latencia</h4>
+                        <p>Refinamiento del algoritmo TTC en C++ y ajuste de umbrales dinámicos por velocidad del vehículo.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Semanas 6-8</div>
+                    <div class="timeline-content glass-card">
+                        <h4>Fase 3 & 4: Módulo Háptico & Integración BLE</h4>
+                        <p>Ensamblaje del prototipo de tapete de asiento con 4 actuadores LRA y validación de latencia BLE GATT &lt; 30ms.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">Semanas 9-10</div>
+                    <div class="timeline-content glass-card">
+                        <h4>Fase 5: Pruebas de Campo en Vehículo Real</h4>
+                        <p>Pruebas de aceleración y frenado a 30, 60 y 90 km/h en pista de pruebas y entrega de la versión v1.0 MVP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTOR CALL TO ACTION -->
+    <section id="investors" class="section investor-cta-section">
+        <div class="container">
+            <div class="investor-box glass-card center">
+                <span class="badge-pill">DECK PARA INVERSIONISTAS Y SOCIOS</span>
+                <h2>Únete a la Revolución de la Seguridad Vehicular</h2>
+                <p>Estamos desarrollando la capa de software IP y hardware modular que permitirá actualizar más de 1.4 mil millones de vehículos sin gastar miles de dólares.</p>
+
+                <div class="cta-actions">
+                    <a href="https://github.com/DarckRovert/Project_sentinel" target="_blank" class="btn btn-primary btn-lg">
+                        Explorar Código Fuente en GitHub
+                    </a>
+                    <a href="mailto:contact@sentinel-adas.org" class="btn btn-secondary btn-lg">
+                        Contactar al Equipo Fundador
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-name">🛡️ SENTINEL</div>
+                <p>Democratizando la seguridad vehicular con hardware COTS y software open-source.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/DarckRovert/Project_sentinel" target="_blank">GitHub Repository</a>
+                <a href="#architecture">Documentación Técnica</a>
+                <a href="#kits">Especificaciones Hardware</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Proyecto Sentinel. Desarrollado con Android Kotlin, C++ JNI y ESP32 BLE.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
